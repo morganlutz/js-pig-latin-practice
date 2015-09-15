@@ -1,12 +1,11 @@
 var pigLatinTranslator = function(word) {
-  var consonants = /[bcdfghjklmnpqrstv]/i;
+  var consonants = /[aeiou]/i;
   if(word[0].match(consonants)) {
-    return true;
+    return word + "ay";
   } else {
-    return false;
+    var newWord = word.substring(1) + word[0] + "ay";
+    return newWord;
   }
-  //return word + "ay";
-
 };
 
 

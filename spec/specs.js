@@ -4,7 +4,7 @@ describe('pigLatinTranslator', function() {
   });
 
   it("takes a single consonant at the beginning of the word and moves it to the end", function() {
-    expect(pigLatinTranslator("cat")).to.equal(true);
+    expect(pigLatinTranslator("cat")).to.equal("atcay");
   });
 
 });
