@@ -14,7 +14,7 @@ $(document).ready(function() {
     var phrase = $("input#phrase").val();
     var result = pigLatinTranslator(phrase);
 
-    $(".phrase").text(result);
+    $(".phraseResult").text(result);
 
     $("#result").show();
     event.preventDefault();
