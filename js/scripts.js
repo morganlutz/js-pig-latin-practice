@@ -8,6 +8,15 @@ var pigLatinTranslator = function(word) {
   }
 };
 
+var phraseSplitter = function(phrase) {
+  var phrase = phrase.split(" ");
+  return phrase;
+};
+
+//pass split phrase into this function to return pig latin translations
+//of all the words inside the phrase. Return as a string.
+var pigLation = function()
+
 
 $(document).ready(function() {
   $("form#translator").submit(function(event) {

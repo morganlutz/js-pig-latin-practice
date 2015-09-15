@@ -6,5 +6,10 @@ describe('pigLatinTranslator', function() {
   it("takes a single consonant at the beginning of the word and moves it to the end", function() {
     expect(pigLatinTranslator("cat")).to.equal("atcay");
   });
+});
 
+describe('phraseSplitter', function() {
+  it("spilts a phrase into an array of words", function() {
+    expect(phraseSplitter("this is split")).to.eql(["this", "is", "split"]);
+  });
 });
