@@ -1,5 +1,5 @@
 var pigLatinTranslator = function(word) {
-  var consonants = /[aeiou]/i;
+  var consonants = /[aeiou]/gi;
   if(word[0].match(consonants)) {
     return word + "ay";
   } else {
@@ -9,19 +9,24 @@ var pigLatinTranslator = function(word) {
 };
 
 var phraseSplitter = function(phrase) {
-  var phrase = phrase.split(" ");
-  return phrase;
+return phrase.split(" ");
 };
 
-//pass split phrase into this function to return pig latin translations
-//of all the words inside the phrase. Return as a string.
-var pigLation = function()
+var pigLatin = function(phrase) {
+  var translatedSentence = "";
+  var splitPhrase = phraseSplitter(phrase);
+  for (var i = 0; i < splitPhrase.length; i++) {
+    var word = splitPhrase[i];
+    var newWord = pigLatinTranslator(word);
+    translatedSentence = translatedSentence + newWord + " ";
+ } return translatedSentence;
+};
 
 
 $(document).ready(function() {
   $("form#translator").submit(function(event) {
     var phrase = $("input#phrase").val();
-    var result = pigLatinTranslator(phrase);
+    var result = pigLatin(phrase);
 
     $(".phraseResult").text(result);
 

@@ -13,3 +13,9 @@ describe('phraseSplitter', function() {
     expect(phraseSplitter("this is split")).to.eql(["this", "is", "split"]);
   });
 });
+
+describe('pigLatin', function() {
+  it("translates english phrase to pig latin phrase", function() {
+    expect(pigLatin("this is split")).to.equal(["isthay isay itsplay"]);
+  });
+});
